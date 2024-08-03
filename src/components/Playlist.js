@@ -1,19 +1,11 @@
-import React, { useContext } from 'react';
-import { MusicContext } from '../context/MusicContext';
+// src/components/Playlist.js
+import React from 'react';
+import '../styles/Playlist.css';
 
 const Playlist = () => {
-  const { playlist, setCurrentTrack } = useContext(MusicContext);
-
   return (
-    <div>
+    <div className="playlist">
       <h2>Playlist</h2>
-      <ul>
-        {playlist.map(track => (
-          <li key={track.id} onClick={() => setCurrentTrack(track)}>
-            {track.name}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
