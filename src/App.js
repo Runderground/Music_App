@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import Header from './components/Header';
 import { MusicProvider } from './context/MusicContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';

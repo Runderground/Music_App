@@ -1,27 +1,18 @@
-
 .library {
-    background: rgba(255, 255, 255, 0.1); 
-    border-radius: 10px;
     padding: 20px;
-    backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
+    background-color: #f4f4f4;
   }
   
-  .music-list {
-    margin-top: 20px;
+  .library h2 {
+    margin-bottom: 20px;
   }
   
-  .music-item {
+  .playlist-item {
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .playlist-item:hover {
+    background-color: #eaeaea;
     cursor: pointer;
-    transition: background 0.3s;
   }
-  
-  .music-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
