@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Player from './components/Player';
+import Playlist from './components/Playlist';
+import { MusicProvider } from './context/MusicContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MusicProvider>
+      <div className="App">
+        <header className="App-header">
+          <h1>Music App</h1>
+        </header>
+        <Playlist />
+        <Player />
+      </div>
+    </MusicProvider>
   );
 }
 
