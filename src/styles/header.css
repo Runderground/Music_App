@@ -1,76 +1,59 @@
-/* src/components/Header.css */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #282c34;
-    color: white;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
+  .header-logo img {
+    height: 40px; 
   }
   
-  .search-form {
-    display: flex;
-    flex: 1;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .search-form input {
-    flex: 1;
+  .header-search input {
+    border: none;
     padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px 0 0 4px;
+    border-radius: 5px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2); 
   }
   
-  .search-form button {
-    padding: 5px 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    background-color: #61dafb;
-    color: #282c34;
-  }
-  
-  .profile {
+  .header-profile {
+    display: flex;
+    align-items: center;
     position: relative;
   }
   
   .profile-icon {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
+    width: 30px; 
     cursor: pointer;
   }
   
-  .dropdown-menu {
+  .profile-menu {
+    display: none; 
     position: absolute;
+    top: 40px; 
     right: 0;
-    top: 100%;
-    background: white;
-    color: #282c34;
-    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    z-index: 1000;
   }
   
-  .dropdown-menu a {
+  .profile-menu button {
     display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #282c34;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
   
-  .dropdown-menu a:hover {
-    background: #f0f0f0;
+  .profile-menu button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-profile:hover .profile-menu {
+    display: block;
   }
   

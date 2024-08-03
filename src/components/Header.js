@@ -1,49 +1,22 @@
 // src/components/Header.js
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/header.css'; 
 
-const Header = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-    onSearch(event.target.value);
-  };
-
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    onSearch(searchTerm); 
-  };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
+const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-        <a href="/">Faccin Music</a>
+      <div className="header-logo">
+        <img src="../../images/logo.png"/>
       </div>
-      <form className="search-form" onSubmit={handleSearchSubmit}>
-        <input
-          type="text"
-          placeholder="Pesquisar músicas ou artistas..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-        <button type="submit">Buscar</button>
-      </form>
-      <div className="profile">
-        <button className="profile-icon" onClick={toggleDropdown}>
-          👤 
-        </button>
-        {isDropdownOpen && (
-          <div className="dropdown-menu">
-            <a href="/settings">Configurações</a>
-            <a href="/logout">Logout</a>
-          </div>
-        )}
+      <div className="header-search">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div className="header-profile">
+        <img src="../images/logo.png" alt="Profile" className="profile-icon" />
+        <div className="profile-menu">
+          <button>Settings</button>
+          <button>Logout</button>
+        </div>
       </div>
     </header>
   );
